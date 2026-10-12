@@ -1,0 +1,21 @@
+[project]
+name = "nautilus"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Christian St Pierre", email = "chris@striveweekly.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "nautilus-trader>=2.0.0rc0,<3",
+    "pandas>=3.1.0rc0",
+    "pyarrow>=26.0.0",
+]
+
+[project.scripts]
+nautilus = "nautilus.backtests.run:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
